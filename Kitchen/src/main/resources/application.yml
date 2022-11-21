@@ -28,10 +28,10 @@ spring:
       bindings:
         event-in:
           group: Kitchen
-          destination: project
+          destination: projecthong
           contentType: application/json
         event-out:
-          destination: project
+          destination: projecthong
           contentType: application/json
 
 logging:
@@ -67,10 +67,10 @@ spring:
       bindings:
         event-in:
           group: Kitchen
-          destination: project
+          destination: projecthong
           contentType: application/json
         event-out:
-          destination: project
+          destination: projecthong
           contentType: application/json
 
 api:
