@@ -1,6 +1,6 @@
 package project.domain;
 
-import project.domain.OrderPicked;
+import project.domain.DeliveryStarted;
 import project.DeliveryApplication;
 import javax.persistence.*;
 import java.util.List;
@@ -27,8 +27,8 @@ public class Delivery  {
     public void onPostPersist(){
 
 
-        OrderPicked orderPicked = new OrderPicked(this);
-        orderPicked.publishAfterCommit();
+        DeliveryStarted deliveryStarted = new DeliveryStarted(this);
+        deliveryStarted.publishAfterCommit();
 
     }
 

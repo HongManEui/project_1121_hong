@@ -2,7 +2,7 @@
 
     <v-card outlined>
         <v-card-title>
-            CheckDelivery
+            PickDelivery
         </v-card-title>
 
         <v-card-text>
@@ -13,9 +13,9 @@
             <v-btn
                     color="deep-purple lighten-2"
                     text
-                    @click="checkDelivery"
+                    @click="pickDelivery"
             >
-                CheckDelivery
+                PickDelivery
             </v-btn>
             
             <v-btn
@@ -33,7 +33,7 @@
 <script>
    
     export default {
-        name: 'CheckDeliveryCommand',
+        name: 'PickDeliveryCommand',
         components:{},
         props: {},
         data: () => ({
@@ -45,8 +45,8 @@
         watch: {
         },
         methods: {
-            checkDelivery() {
-                this.$emit('checkDelivery', this.value);
+            pickDelivery() {
+                this.$emit('pickDelivery', this.value);
             },
             close() {
                 this.$emit('closeDialog');

@@ -33,7 +33,7 @@ public class Cook  {
         project.external.Delivery delivery = new project.external.Delivery();
         // mappings goes here
         KitchenApplication.applicationContext.getBean(project.external.DeliveryService.class)
-            .checkDelivery(delivery);
+            .pickDelivery(delivery);
 
 
         CookFinished cookFinished = new CookFinished(this);

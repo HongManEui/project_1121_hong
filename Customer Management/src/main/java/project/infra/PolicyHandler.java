@@ -22,20 +22,6 @@ public class PolicyHandler{
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString){}
 
-    @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='OrderPicked'")
-    public void wheneverOrderPicked_KakaoAlarm(@Payload OrderPicked orderPicked){
-
-        OrderPicked event = orderPicked;
-        System.out.println("\n\n##### listener KakaoAlarm : " + orderPicked + "\n\n");
-
-
-        
-
-        // Sample Logic //
-
-        
-
-    }
     @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='CookFinished'")
     public void wheneverCookFinished_KakaoAlarm(@Payload CookFinished cookFinished){
 
@@ -69,6 +55,20 @@ public class PolicyHandler{
 
         PayApproved event = payApproved;
         System.out.println("\n\n##### listener KakaoAlarm : " + payApproved + "\n\n");
+
+
+        
+
+        // Sample Logic //
+
+        
+
+    }
+    @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='DeliveryStarted'")
+    public void wheneverDeliveryStarted_KakaoAlarm(@Payload DeliveryStarted deliveryStarted){
+
+        DeliveryStarted event = deliveryStarted;
+        System.out.println("\n\n##### listener KakaoAlarm : " + deliveryStarted + "\n\n");
 
 
         
