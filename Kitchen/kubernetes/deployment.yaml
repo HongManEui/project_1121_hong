@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Kitchen
+  labels:
+    app: Kitchen
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: Kitchen
+  template:
+    metadata:
+      labels:
+        app: Kitchen
+    spec:
+      containers:
+        - name: Kitchen
+          image: username/Kitchen:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
