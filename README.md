@@ -2,7 +2,7 @@
 
 Level 2 실습 예제
 
-![image](https://user-images.githubusercontent.com/30682608/202966974-12680550-054a-446a-96d1-e718fcd76da2.png)
+![Inkedeventstorming_LI](https://user-images.githubusercontent.com/30682608/202969200-8cd8d05a-f2eb-49ba-9ca3-b69d2646beec.jpg)
 
 1. 고객이 메뉴를 선택하여 주문한다.
 2. 고객이 선택한 메뉴에 대해 결제한다.
