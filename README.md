@@ -16,3 +16,18 @@ Level 2 실습 예제
 10. 주문상태가 바뀔때 마다 카톡으로 알림을 보낸다.
 11. 고객이 요리를 배달 받으면 배송 확인 버튼을 탭하여, 모든 거래가 완료된다.
 
+
+
+구현 요구사항
+1. 고객이 메뉴를 선택하여 주문한다.
+2. 고객이 선택한 메뉴에 대해 결제한다.
+
+
+
+체크포인트
+1. Sage(Pub/Sub)
+2. CQRS
+3. Compensation / Correlation
+4. Request / Response
+5. Circuit Breaker
+6. Gateway / Breaker
